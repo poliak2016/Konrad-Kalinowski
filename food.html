@@ -6,26 +6,25 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name='author' content='Yurii Poliak, poliak2016@outlook.com' />
 
-<!-- styles main page -->
-<link rel="stylesheet" href="../food.css"/>
+<link rel="stylesheet" href="./styles/food.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fira+Code:wght@300&family=Hind+Vadodara:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<title>Konrad Kalinowski </title>
-
+  <title>Konrad Kalinowski</title>
 </head>
 
 <body>
+  <main>
     <section class="header">
         <nav class="nav-links">
             <ul class="sidebar big-screen-hide">
                 <li onclick="hideSidebar()"><a class="nav-a" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                <li><a class="nav-a" id="home" href="index.html">Home</a></li>
-                <li><a class="nav-a" id="potrety" href="portrety.html">Portrety</a></li>
-                <li><a class="nav-a" id="miejsca" href="miejsca.html">Miejsca</a></li>
-                <li><a class="nav-a" id="food" href="food.html">Food</a></li>
-                <li><a class="nav-a" id="food" href="about.html">About</a></li>
-                <li><a class="instagram nav-a" target="_blank" href="https://www.instagram.com/_napstrykany"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a class="nav-a" href="index.html">Home</a></li>
+                <li><a class="nav-a" href="portrety.html">Portrety</a></li>
+                <li><a class="nav-a" href="miejsca.html">Miejsca</a></li>
+                <li><a class="nav-a" href="food.html">Food</a></li>
+                <li><a class="nav-a" id="about-sidebar" href="about.html">About</a></li>
+                <li><a class="instagram nav-a" target="_blank" rel="noopener" href="https://www.instagram.com/_napstrykany"><i class="fa-brands fa-instagram"></i></a></li>
             </ul>
             <ul>
                 <li><a class="nav-a" id="home" href="index.html">Home</a></li>
@@ -33,7 +32,7 @@
                 <li class="mobile-hide"><a class="nav-a" id="miejsca" href="miejsca.html">Miejsca</a></li>
                 <li class="mobile-hide"><a class="nav-a" id="food" href="food.html">Food</a></li>
                 <li class="mobile-hide"><a class="nav-a" id="about" href="about.html">About</a></li>
-                <li><a class="instagram nav-a" target="_blank" href="https://www.instagram.com/_napstrykany"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a class="instagram nav-a" target="_blank" rel="noopener" href="https://www.instagram.com/_napstrykany"><i class="fa-brands fa-instagram"></i></a></li>
                 <li onclick="showSidebar()" class=" big-screen-hide"><a class="nav-a" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
             </ul>
         </nav>
@@ -53,53 +52,51 @@
 <section class="text">
     <h1>Food</h1>
 </section>
-
-<section class="gallery" >
-    <div class="full-img" id="fullImgBox">
-        <img  src="/images/PORTRETY/untitled-00448.JPG" id="fullImg">
+    <section class="gallery">
+      
+      <div class="full-img" id="fullImgBox">
+        <img src="" id="fullImg" alt="Full size food image" />
         <span onclick="closeFullImg()">x</span>
-    </div>
-    <img  src=" ../untitled-09825.JPG" onclick="openFullImg(this.src)">
-    <img  src=" ../untitled-09810.JPG" onclick="openFullImg(this.src)">
-    <img  src="/images/FOOD/untitled-08975.JPG" onclick="openFullImg(this.src)">
-    <img  src="/images/FOOD/untitled-07754.JPG" onclick="openFullImg(this.src)">
-    <img  src="/images/FOOD/untitled-07557.JPG" onclick="openFullImg(this.src)">
-    <img  src="/images/FOOD/untitled-06419.JPG" onclick="openFullImg(this.src)">
-    <img  src="/images/FOOD/untitled-06243.JPG" onclick="openFullImg(this.src)">
-    <img  src="/images/FOOD/untitled-05912.JPG" onclick="openFullImg(this.src)">
-    <img  src="/images/FOOD/untitled-05909.JPG" onclick="openFullImg(this.src)">
-    <img  src="/images/FOOD/untitled-01161.JPG" onclick="openFullImg(this.src)">
-    <img  src="/images/FOOD/untitled-00486-2.JPG" onclick="openFullImg(this.src)">
-    <img  src="/images/FOOD/untitled-00270.JPG" onclick="openFullImg(this.src)">
-    <script>
+      </div>
 
-        var fullImgBox = document.getElementById("fullImgBox");
-        var fullImg = document.getElementById("fullImg");
-
-        function openFullImg(pic){
-            fullImgBox.style.display = "flex";
-            fullImg.src = pic;
-        }
-
-        function closeFullImg(){
-            fullImgBox.style.display = "none";
-        }
-
-
-    </script>
-
-</section>
-
-<section class="footer">
-    <div class="telefon">
-        <a class="footer-a" href="tel:664305339">tel: 664305339</a>
-    </div>
-    <div class="mail">
-        <a class="footer-a" href="mailto:poliak2016@outlook.com">mail: poliak2016@outlook.com</a>
-    </div>
-    <div class="socialy">
-        <a class="instagram footer-a" target="_blank" href="https://www.instagram.com/_napstrykany"><i class="fa-brands fa-instagram"></i></a>
-        <a class="facebook footer-a" target="_blank" href="https://www.facebook.com/kszt.kk?locale=pl_PL"><i class="fa-brands fa-facebook"></i></a>
+      
+    <img alt="Hand holding a Chemex coffee maker with a paper filter on a table, silhouetted against a bright window with blurred text in the background, creating a calm and contemplative atmosphere" src="./images/FOOD/untitled-09810.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Stack of pancakes topped with berries and syrup on a white plate, set on a rustic wooden table with a blurred kitchen background, evoking a cozy and inviting mood" src="./images/FOOD/untitled-08975.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Close-up of a bowl of ramen with sliced pork, egg, and green onions, steam rising above the bowl, placed on a wooden counter in a warmly lit restaurant" src="./images/FOOD/untitled-07754.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Freshly baked bread loaf on a cutting board, surrounded by scattered flour and a bread knife, with a sunlit kitchen in the background, conveying a homely and warm feeling" src="./images/FOOD/untitled-07557.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Colorful salad with greens, tomatoes, and feta cheese in a ceramic bowl, set on a marble countertop with a blurred window view, suggesting freshness and vibrancy" src="./images/FOOD/untitled-06419.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Barista pouring steamed milk into a cup of espresso to create latte art, with coffee equipment and cups visible in the softly lit café environment" src="./images/FOOD/untitled-06243.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Assorted sushi rolls arranged on a slate platter, garnished with pickled ginger and wasabi, with chopsticks and a soy sauce dish nearby, set in a modern restaurant" src="./images/FOOD/untitled-05912.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Chef slicing vegetables on a wooden board, surrounded by fresh ingredients and kitchen utensils, with a bustling kitchen scene in the background" src="./images/FOOD/untitled-05909.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Cupcake with pink frosting and sprinkles on a decorative plate, placed on a pastel tablecloth with blurred party decorations in the background, creating a cheerful and festive mood" src="./images/FOOD/untitled-01161.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Glass of orange juice next to a halved orange on a breakfast tray, with sunlight streaming through a window and a relaxed morning setting" src="./images/FOOD/untitled-00486-2.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Grilled steak garnished with fresh herbs and accompanied by roasted vegetables on a white plate, placed on a wooden table in a rustic dining room, creating a hearty and satisfying mood" src="./images/FOOD/untitled-00270.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Stack of pancakes topped with berries and syrup on a white plate, set on a rustic wooden table with a blurred kitchen background, evoking a cozy and inviting mood" src="./images/FOOD/untitled-08975.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Close-up of a bowl of ramen with sliced pork, egg, and green onions, steam rising above the bowl, placed on a wooden counter in a warmly lit restaurant" src="./images/FOOD/untitled-07754.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Freshly baked bread loaf on a cutting board, surrounded by scattered flour and a bread knife, with a sunlit kitchen in the background, conveying a homely and warm feeling" src="./images/FOOD/untitled-07557.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Colorful salad with greens, tomatoes, and feta cheese in a ceramic bowl, set on a marble countertop with a blurred window view, suggesting freshness and vibrancy" src="./images/FOOD/untitled-06419.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Barista pouring steamed milk into a cup of espresso to create latte art, with coffee equipment and cups visible in the softly lit café environment" src="./images/FOOD/untitled-06243.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Assorted sushi rolls arranged on a slate platter, garnished with pickled ginger and wasabi, with chopsticks and a soy sauce dish nearby, set in a modern restaurant, evoking a sense of freshness and culinary artistry" src="./images/FOOD/untitled-05912.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Chef slicing vegetables on a wooden board, surrounded by fresh ingredients and kitchen utensils, with a bustling kitchen scene in the background" src="./images/FOOD/untitled-05909.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Cupcake with pink frosting and sprinkles on a decorative plate, placed on a pastel tablecloth with blurred party decorations in the background, creating a cheerful and festive mood" src="./images/FOOD/untitled-01161.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Glass of orange juice next to a halved orange on a breakfast tray, with sunlight streaming through a window and a relaxed morning setting" src="./images/FOOD/untitled-00486-2.JPG" onclick="openFullImg(this.src)" />
+    <img alt="Grilled steak garnished with fresh herbs and accompanied by roasted vegetables on a white plate, placed on a wooden table in a rustic dining room, creating a hearty and satisfying mood" src="./images/FOOD/untitled-00270.JPG" onclick="openFullImg(this.src)" />
     </section>
+  </main>
+
+  <script>
+    const fullImgBox = document.getElementById("fullImgBox");
+    const fullImg = document.getElementById("fullImg");
+
+    function openFullImg(pic) {
+      fullImgBox.style.display = "flex";
+      fullImg.src = pic;
+    }
+
+    function closeFullImg() {
+      fullImgBox.style.display = "none";
+    }
+  </script>
 </body>
+
 </html>
